@@ -2,8 +2,7 @@
 name: Run some tests
 on:
   pull_request:
-  push:
-    branches-ignore:
+    branches:
       - main
 jobs:
   pre-commit:
