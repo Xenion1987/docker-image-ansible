@@ -13,6 +13,6 @@ COPY requirements.txt /tmp/build-my-image/
 # Install all applications
 RUN chmod +x /tmp/build-my-image/setup-docker-container.sh
 WORKDIR /tmp/build-my-image/
-RUN /tmp/build-my-image/setup-docker-container.sh install all ansible ${ANSIBLE_VERSION} ${ANSIBLE_LINT_VERSION}
-RUN rm -rf /tmp/build-my-image/
+RUN /tmp/build-my-image/setup-docker-container.sh install all ansible ${ANSIBLE_VERSION} ${ANSIBLE_LINT_VERSION} && \
+    rm -rf /tmp/build-my-image/
 WORKDIR /root/
